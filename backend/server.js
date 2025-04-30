@@ -1,9 +1,11 @@
 import express from 'express';
 import cors from 'cors';
-import 'dotenv/config';
+import dotenv from 'dotenv';
 import connectDB from './config/mongodb.js';
-import  cloudinaryConfig  from './config/cloudinary.js';
+import cloudinaryConfig from './config/cloudinary.js';
 import adminRouter from './routes/adminRoute.js';
+
+dotenv.config();
 
 // app
 const app = express();
@@ -20,7 +22,7 @@ app.use(express.json());
 app.use(cors());
 
 // api endpoints
-app.use('/api/admin', adminRouter);  // <-- fixed 'application' to 'app' and added missing '/'
+app.use('/api/admin', adminRouter);
 
 // root endpoint
 app.get('/', (req, res) => {

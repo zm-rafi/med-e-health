@@ -6,22 +6,22 @@ import { assets } from '../assets/assets'
 const Slidebar = () => {
     const {aToken} =useContext(AdminContext)
   return (
-    <div>
+    <div className='min-h-screen bg-white border-r-2 border-[#E4E4E7] w-[250px] flex flex-col justify-between'>
         {
             aToken && <ul>
-                <NavLink to={'/admin-dashboard'}>
+                <NavLink className={({isActive})=> `flex items-center gap-5 py-3.5  px-3 cursor-pointer${isActive?'bg-[#F2F3FF] border-r-4 bg-blue-100 border-blue-500':''}`} to={'/admin-dashboard'}>
                     <img src={assets.home_icon} alt="" />
                     <p>Dashboard</p>
                 </NavLink>
-                <NavLink to={'/all-appoinements'}>
+                <NavLink className={({isActive})=> `flex items-center gap-4 py-3.5  px-3 cursor-pointer${isActive?'bg-[#F2F3FF] border-r-4 bg-blue-100 border-blue-500':''}`} to={'/all-appoinements'}>
                     <img src={assets.appointment_icon} alt="" />
-                    <p>Appoinements</p>
+                    <p>Appoinement</p>
                 </NavLink>
-                <NavLink to={'/add-doctor'}>
+                <NavLink className={({isActive})=> `flex items-center gap-6 py-3.5  px-3 cursor-pointer${isActive?'bg-[#F2F3FF] border-r-4 bg-blue-100 border-blue-500':''}`} to={'/add-doctor'}>
                     <img src={assets.add_icon} alt="" />
                     <p>Add Doctor</p>
                 </NavLink>
-                <NavLink to={'/doctor-list'}>
+                <NavLink className={({isActive})=> `flex items-center gap-6 py-3.5  px-3 cursor-pointer${isActive?'bg-[#F2F3FF] border-r-4 bg-blue-100 border-blue-500':''}`} to={'/doctor-list'}>
                     <img src={assets.people_icon} alt="" />
                     <p>Doctor List</p>
                 </NavLink>

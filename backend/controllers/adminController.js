@@ -2,6 +2,7 @@ import jwt from 'jsonwebtoken';
 import validator from 'validator';
 import bcrypt from 'bcrypt'
 import {v2 as cloudinary} from 'cloudinary'
+import doctorModel from '../models/doctorModel.js'
 
 //api for adding doctor
 
@@ -45,7 +46,7 @@ const addDoctor =async (removeEventListener,req,res)=>{
             date:Date.now(),
             
         };
-        const newDoctor =  new Doctor(doctorData)
+        const newDoctor =  new doctorModel(doctorData)
         await newDoctor.save();
         res.json({success:true,message:"Doctor added successfully",doctor:newDoctor})
         // res.status(201).json({ message: "Doctor added successfully", doctor });
@@ -68,7 +69,7 @@ const loginAdmin = async(req,res)=>{
         if(!validator.isEmail(email)){
             return res.json({success:false,message:"please enter a valid email"})
         }
-        const admin = await Admin.findOne({email})
+        const admin = await ADMIN_EMAIL.findOne({email})
         if(!admin){
             return res.json({success:false,message:"admin not found"})
         }

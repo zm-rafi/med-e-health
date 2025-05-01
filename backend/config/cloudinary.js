@@ -1,7 +1,7 @@
 import pkg from 'cloudinary';
 const { v2: cloudinary } = pkg;
 
-const cloudinaryConfig = () => {
+const connectCloudinary = async () => {
     cloudinary.config({
         cloud_name: process.env.CLOUDINARY_NAME,
         api_key: process.env.CLOUDINARY_API_KEY,
@@ -9,4 +9,4 @@ const cloudinaryConfig = () => {
     });
 };
 
-export default cloudinaryConfig;
+export default connectCloudinary;

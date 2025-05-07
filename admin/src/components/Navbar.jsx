@@ -9,9 +9,9 @@ const Navbar = () => {
   const navigate =useNavigate()
   const logout=()=>
   {
-    useNavigate('/login')
     aToken && setAToken('')
     aToken && localStorage.removeItem('aToken')
+    navigate('/login')
 
   }
   return (
@@ -20,7 +20,7 @@ const Navbar = () => {
         <img className="w-36 cursor-pointer" src={assets.admin_logo} alt="" />
         <p className="border px-2.5 py-0.5 rounded-full border-gray-500 text-gray-500">{aToken ? 'Admin' : 'Doctor'}</p>
       </div>
-      <button className="bg-blue-500 text-white text-sm px-10 py-2 rounded-full cursor-pointer">Logout</button>
+      <button onClick={logout} className="bg-blue-500 text-white text-sm px-10 py-2 rounded-full cursor-pointer">Logout</button>
     </div>
   );
 };

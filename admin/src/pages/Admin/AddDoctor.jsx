@@ -10,7 +10,7 @@ const AddDoctor = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [experience, setExperience] = useState('1 year')
-  const [fees, setFees] = useState('')
+  const [fees, setFees] = useState(0)
   const [speciality, setSpeciality] = useState('')
   const [degree, setDegree] = useState('')
   const [address1, setAddress1] = useState('')
@@ -26,14 +26,14 @@ const AddDoctor = () => {
         return toast.error('please upload doctor image')
       }
       const formData = new FormData()
-      formData.append('docImg', docImg)
+      formData.append('image', docImg)
       formData.append('name', name)
       formData.append('email', email)
       formData.append('password', password)
-      formData.append('experience', experience)
-      formData.append('fees', Number(fees))
-      formData.append('about', about)
       formData.append('speciality', speciality)
+      formData.append('experience', experience)
+      formData.append('about', about)
+      formData.append('fees', Number(fees))
       formData.append('degree', degree)
       formData.append('address', JSON.stringify({ line1: address1, line2: address2 }))
       //console
@@ -42,6 +42,7 @@ const AddDoctor = () => {
       })
 
       const { data } = await axios.post(backendUrl + '/api/admin/add-doctor', formData, { headers: { aToken } })
+      console.log("ok")
       if(data.success){
         toast.success(data.message)
         setDocImg(false)
@@ -49,13 +50,13 @@ const AddDoctor = () => {
         setEmail('')
         setPassword('')
         setExperience('1 year')
-        setFees('')
+        setFees(0)
         setSpeciality('')
         setDegree('')
         setAddress1('')
         setAddress2('')
         setAbout('')
-
+        console.log("ds")
       }
         else{
       toast.error(data.message) }

@@ -10,7 +10,7 @@ const addDoctor = async (req, res) => {
         const { name, email, password, phone, speciality, degree, experience, about, fees, address } = req.body;
         const File = req.file; // Assuming you're using multer to handle file uploads
 
-        if (!name || !email || !password || !phone || !speciality || !degree || !experience || !about || !fees || !address) {
+        if (!name || !email || !password || !speciality || !degree || !experience || !about || !fees || !address) {
             return res.json({ success: false, message: "All fields are required" });
         }
 
@@ -27,7 +27,7 @@ const addDoctor = async (req, res) => {
         const hashedPassword = await bcrypt.hash(password, salt);
 
         // Image upload
-        const imgUpload = await cloudinary.uploader.upload(imageFile.path, { resource_type: "image" });
+        const imgUpload = await cloudinary.uploader.upload(File.path, { resource_type: "image" });
         const imageUrl = imgUpload.secure_url;
 
         const doctorData = {

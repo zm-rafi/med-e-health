@@ -1,8 +1,14 @@
-const addDoctor =async(req, res) => {
+import doctorModel from "../models/doctorModel.js";
+const changeAvailability = async (req, res) => {
     try{
-        const {name, email, password,speciality,experience,about,fees,address,degree} = req.body;
+        const { docId } = req.body;
+        const docData = await doctorModel.findById(docId);
+        await doctorModel.findByIdAndUpdate(docId, { available: !docData.available });
+        res.json({ success: true, message: "Doctor availability changed successfully" });
+    }catch(error){
+        console.log(error)
+        res.json({success:false,message:error.message})
     }
-    catch(error){}
 }
 
-export {addDoctor}
+export {changeAvailability}

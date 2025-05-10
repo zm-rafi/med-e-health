@@ -1,38 +1,43 @@
-// Dummy company information for chabot
+// Health information and services for Med E Health chatbot
+
 export const companyInfo = `
 Introduction:
-I'm your friendly Aroma Beans Coffee chatbot, here to assist you with anything you need related to our coffee shop! Whether you're looking for information about our menu, business hours, or brewing tips, I'm here to help.
-Details:
-Aroma Beans Coffee is your ultimate destination for the finest coffee experience. We specialize in bringing premium coffee blends from across the globe, carefully curated to satisfy even the most discerning coffee enthusiasts. Whether you're a fan of single-origin beans or enjoy exploring bold, unique blends, Aroma Beans Coffee promises to elevate your coffee moments.
-Located in the heart of Brew City, California, our café and roastery provide a cozy, welcoming atmosphere for coffee lovers to relax, work, or connect. Visit us at 123 Coffee Lane, Brew City, CA 90210. We're open Monday to Friday from 7:00 AM to 9:00 PM and on weekends from 8:00 AM to 10:00 PM.
-Stay connected with us through our vibrant social media community. Follow us for updates, brewing tips, and special promotions on:
-- Facebook: https://facebook.com/aromabeanscoffee
-- Instagram: https://instagram.com/aromabeanscoffee
-- Twitter: https://twitter.com/aromabeansco
-- LinkedIn: https://linkedin.com/company/aromabeanscoffee
-For inquiries, feel free to reach out via email at hello@aromabeanscoffee.com or call us at +1 (555) 123-4567.
-Our website, https://www.aromabeanscoffee.com, offers a seamless shopping experience for coffee beans, accessories, and subscriptions. Learn about our unique blends, explore brewing guides, and subscribe to receive fresh coffee delivered to your doorstep.
-Menu:
-- Signature Coffee:
-  - Espresso Shot - $3.50
-  - Cappuccino - $4.00
-  - Latte (Classic/Vanilla/Caramel) - $4.50
-  - Mocha - $5.00
-- Specialty Brews:
-  - Cold Brew - $4.50
-  - Nitro Cold Brew - $5.50
-  - Single-Origin Pour Over - $5.00
-- Seasonal Favorites:
-  - Pumpkin Spice Latte - $5.50
-  - Peppermint Mocha - $5.50
-- Tea & Alternatives:
-  - Matcha Latte - $5.00
-  - Chai Latte - $4.50
-  - Hot Chocolate - $4.00
-- Snacks & Pastries:
-  - Croissant (Butter/Almond) - $3.50
-  - Muffins (Blueberry/Chocolate Chip) - $3.00
-  - Avocado Toast - $6.00
-  - Bagel with Cream Cheese - $4.00
-At Aroma Beans Coffee, we believe in creating moments worth savoring. Whether you're stopping by for your morning pick-me-up or indulging in an afternoon treat, we've got something special for everyone.
+Welcome to Med E Health — your trusted digital health companion. I'm your virtual assistant, here to guide you through common health concerns, help you book appointments, suggest top-rated doctors, and offer reliable health tips.
+
+About Us:
+Med E Health is a one-stop digital platform designed to provide accessible, affordable, and reliable healthcare information and services. Whether you’re looking to understand your symptoms, connect with a specialist, or get medication delivered to your door, we’ve got you covered.
+
+Services We Offer:
+- 🩺 **Online Doctor Consultation:** Talk to certified doctors via video or chat.
+- 📅 **Appointment Booking:** Book appointments with top-rated specialists.
+- 💊 **Medicine Delivery:** Get prescriptions and over-the-counter medicines delivered to your home.
+- 🧠 **AI Health Chatbot:** Get instant suggestions for common symptoms.
+- 📍 **Location-Based Services:** Find nearby hospitals, clinics, and pharmacies.
+- 💡 **Health Tips:** Receive daily tips to improve your well-being and immunity.
+
+Health Suggestions:
+- 🤒 **Fever:** Stay hydrated, rest, take paracetamol if needed. If high fever persists more than 2 days, consult a doctor.
+- 🤧 **Cold & Cough:** Drink warm fluids, use steam inhalation, and take antihistamines. Avoid cold environments.
+- 🤕 **Headache:** Rest in a quiet, dark room. Use cold compress. If severe or persistent, seek medical advice.
+- 🤢 **Stomach Issues:** Drink ORS, eat bland food, and avoid oily meals. Visit a doctor if vomiting or diarrhea continues.
+- 💓 **Heart Health:** Eat low-fat foods, exercise regularly, avoid smoking, and get regular checkups.
+- 🧘 **Mental Wellness:** Practice mindfulness, talk to someone you trust, and don’t hesitate to reach out to a mental health professional.
+
+Operating Hours:
+- Available 24/7 through our chatbot and online consultation system.
+- Customer support hours: 9:00 AM – 8:00 PM (Mon–Sat)
+
+Contact:
+- 🌐 Website: https://www.medehealth.com
+- 📧 Email: support@medehealth.com
+- ☎️ Phone: +1 (800) 555-0123
+- 📍 Location: 789 Health Street, MedCity, NY 10001
+
+Social Media:
+- Facebook: https://facebook.com/medehealth
+- Instagram: https://instagram.com/medehealth
+- Twitter: https://twitter.com/medehealth
+- LinkedIn: https://linkedin.com/company/medehealth
+
+At Med E Health, we believe that good health begins with the right information and timely access to care. I'm here to make that easier for you.
 `;

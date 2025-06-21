@@ -11,6 +11,7 @@ import MyProfile from './pages/MyProfile';
 import MyAppointments from './pages/MyAppointments'; // fix typo: MyAppoinments -> MyAppointments
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import Verify from './pages/Verify'; 
  // fix typo: inport -> import
  // fix typo: chatbot -> Chatbot
 const App = () => {
@@ -29,7 +30,7 @@ const App = () => {
         <Route path="/my-profile" element={<MyProfile />} />
         <Route path="/my-appointments" element={<MyAppointments />} /> {/* fixed spelling */}
         <Route path="/appointment/:docId" element={<Appointment />} /> {/* fixed spelling */}
-        
+        <Route path='/verify' element={<Verify />} />
       </Routes>
       <Footer />
     </div>
